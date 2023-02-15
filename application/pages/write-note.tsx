@@ -23,7 +23,7 @@ const WriteNote: NextPage = () => {
   } = useContractWrite(contract, "writeNote");
 
   return (
-    <div className={styles.connect}>
+    <div className={styles.container}>
       <Header />
       <section className={styles.info}>
         <p className="label">ID:</p>

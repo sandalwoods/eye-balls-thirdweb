@@ -5,7 +5,7 @@ import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.connect}>
+    <div className={styles.container}>
       <Header />
       <section className={styles.info}>
         <img className={styles.eyeLogo} src="./logo.svg" alt="logo" />

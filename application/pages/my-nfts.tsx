@@ -26,7 +26,7 @@ const MyNfts: NextPage = () => {
   };
 
   return (
-    <div className={styles.connect}>
+    <div className={styles.container}>
       <Header />
       {msg ? <p>Note: {msg}</p> : null}
       <section className={styles.info}>

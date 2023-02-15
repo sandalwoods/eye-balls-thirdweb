@@ -15,7 +15,7 @@ const Nfts: NextPage = () => {
   const { data: nfts, isLoading, error } = useNFTs(contract);
 
   return (
-    <div className={styles.connect}>
+    <div className={styles.container}>
       <Header />
       <section className={styles.info}>
         {isLoading ? (
