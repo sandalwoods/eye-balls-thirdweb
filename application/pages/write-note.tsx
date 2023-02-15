@@ -44,7 +44,7 @@ const WriteNote: NextPage = () => {
         <button disabled={isLoading} onClick={() => write([id, note])}>
           Write Note
         </button>
-        <div style={{ width: "20px", alignItems: "center" }}>
+        <div className={styles.center}>
           <Web3Button
             contractAddress="0x324cd8F28F1a83cdd67f2C79CC533bDe731aE3aB"
             action={async (contract) => {
