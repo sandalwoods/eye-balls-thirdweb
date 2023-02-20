@@ -1,0 +1,39 @@
+.container {
+  padding: 24px;
+}
+
+/* ------------------------------------------------------ */
+/* -- CARDS -- */
+
+.cards__section {
+  padding: 0;
+  /* max-width: 1200px;
+  margin: 0 auto 50px;
+  padding: 0 20px; */
+}
+
+.cards__section h2 {
+  margin-top: 50px;
+
+  font-family: "Merriweather";
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+
+  text-align: center;
+}
+
+.cards__section p {
+  margin: 10px auto 25px;
+  text-align: center;
+}
+
+.card__info p strong {
+  font-family: "Merriweather";
+  font-size: clamp(1.25rem, 3vw, 1.80rem);
+  font-weight: 700;
+  margin: 0;
+}
+
+.cards {
+  /* width: 1200px; */
+}

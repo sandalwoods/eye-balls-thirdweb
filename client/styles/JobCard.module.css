@@ -1,0 +1,79 @@
+.container {
+  padding: 24px;
+}
+.card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+
+  width: 90%;
+  max-width: 800px;
+  height: 60px;
+
+  border: 1px solid white;
+  margin: 25px auto;
+  padding-left: 25px;
+
+  position: relative;
+
+  transition: all 250ms ease;
+}
+
+.card__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  text-align: left;
+}
+
+.card__info h3 {
+  /* font-family: "Merriweather"; */
+  /* font-size: clamp(1rem, 3vw, 1.25rem); */
+  /* font-weight: 900; */
+}
+
+.card__info p {
+  font-family: "Merriweather";
+  font-size: 1.15rem;
+  font-weight: 300;
+  margin: 0;
+}
+
+.card__info p small {
+  font-size: clamp(0.80rem, 2vw, 0.90rem);
+}
+
+.card__info p small span {
+  font-weight: 700;
+}
+
+.card__info p strong {
+  font-family: "Merriweather";
+  font-size: clamp(1.25rem, 3vw, 1.80rem);
+  font-weight: 700;
+  margin: 0;
+}
+
+.card__button {
+  width: 125px;
+  height: 100%;
+
+  background-color: rgb(214, 65, 222);
+  /* color: var(--clr-white); */
+
+  margin-left: auto;
+  border: none;
+
+  /* font-family: "Open Sans"; */
+  font-size: 1em;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: all 250ms ease;
+}
+
+.card__button:hover {
+  background-color: rgb(147, 50, 156);
+}
+

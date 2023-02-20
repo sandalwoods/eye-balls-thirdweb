@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid gray;
+  /* background: #303542; */
+}
+
+.link {
+  font-size: large;
+  font-weight: bold;
+  margin-right: 20px;
+  color: white;
+}
+
+.link:hover {
+  border-bottom: 2px solid white;
+}
+
+.active {
+  font-size: large;
+  font-weight: bold;
+  margin-right: 20px;
+  color: rgb(214, 65, 222);
+  border-bottom: 2px solid rgb(214, 65, 222);
+}
+
+.connect_button {
+  width: 175px;
+  height: 45px;
+  background-color: rgb(214, 65, 222);
+  border-radius: 5px;
+  font-size: large;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 250ms ease;
+}
+
+.connect_button:hover {
+  background-color: rgb(147, 50, 156);
+}

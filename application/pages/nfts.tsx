@@ -26,7 +26,7 @@ const Nfts: NextPage = () => {
               <div key={nft.metadata.id}>
                 <ThirdwebNftMedia
                   metadata={nft.metadata}
-                  height="200"
+                  height="100"
                   style={{ borderRadius: "10px" }}
                 />
                 <p>{nft.metadata.name}</p>
