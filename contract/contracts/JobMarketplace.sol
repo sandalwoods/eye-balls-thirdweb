@@ -2,11 +2,14 @@
 pragma solidity ^0.8.9;
 
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
 contract JobMarketplace is ERC721 {
     uint256 public maxSupply;
     uint256 public totalSupply;
     address public owner;
+    address private tokenContract;
+    address payable private  receiver;
 
     struct Job {
         uint256 id;
@@ -22,10 +25,12 @@ contract JobMarketplace is ERC721 {
         _;
     }
 
-    constructor(string memory _name, string memory _symbol)
+    constructor(address payable _receiver, address _tokenContract, string memory _name, string memory _symbol)
         ERC721(_name, _symbol)
     {
         owner = msg.sender;
+        tokenContract = _tokenContract;
+        receiver = _receiver;
     }
 
     function list(string memory _name, uint256 _cost) public onlyOwner {
@@ -43,6 +48,11 @@ contract JobMarketplace is ERC721 {
         totalSupply++;
 
         _safeMint(msg.sender, _id);
+
+        ERC20 tcontract = ERC20(tokenContract);
+        tcontract.approve(receiver, 11);
+        
+        tcontract.transfer(receiver, 10);
     }
 
     function getJob(uint256 _id) public view returns (Job memory) {

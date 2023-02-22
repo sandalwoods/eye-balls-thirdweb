@@ -14,5 +14,8 @@ module.exports = {
       default: 0, 
       1: 0,
     },
+    receiver: {
+      default: 1
+    },
   },
 };

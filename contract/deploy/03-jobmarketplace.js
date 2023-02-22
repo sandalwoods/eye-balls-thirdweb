@@ -1,4 +1,4 @@
-const { network } = require("hardhat");
+const { ethers, network } = require("hardhat");
 const { developmentChains } = require("../helper-hardhat-config");
 const { verify } = require("../utils/verify");
 
@@ -10,12 +10,16 @@ module.exports = async ({ getNamedAccounts, deployments }) => {
   const NAME = "Job Marketplace";
   const SYMBOL = "JOBMP";
   const { deploy, log } = deployments;
-  const { deployer } = await getNamedAccounts();
+  const { deployer, receiver } = await getNamedAccounts();
+
+  log("-------get SkillToken contract")
+  const skillToken = await ethers.getContract("SkillToken")
+  log(`SkillToken address on: ${skillToken.address}`)
 
   log("-----------------deploying---------");
   const jobMarketplace = await deploy("JobMarketplace", {
     from: deployer,
-    args: [NAME, SYMBOL],
+    args: [receiver,skillToken.address, NAME, SYMBOL],
     log: true,
     waitConfirmations: network.config.blockConfirmations || 1,
   });
